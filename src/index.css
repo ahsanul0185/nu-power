@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #f2b10e;
+    --color-gray : #a8a7a7;
+    --color-dark: #1a1819;
+    --color-darkGray: #656263;
+    --color-orange : #f6a235;
+    --container-7xl: 50rem;
+}
+
+.section-padding {
+    @apply max-w-[1000px] 2xl:max-w-[1240px] mx-auto px-6 md:px-8
+}
+
+.custom-scrollbar {
+    @apply [&::-webkit-scrollbar]:w-2 
+    [&::-webkit-scrollbar-track]:bg-gray-200 
+    [&::-webkit-scrollbar-thumb]:bg-gray-400 
+    [&::-webkit-scrollbar-thumb]:rounded-full 
+    [&::-webkit-scrollbar-thumb]:hover:bg-gray-300
+}
+
+  
+::selection { 
+    background-color: var(--color-primary);
+    color: #ffffff;
+  }
+
+::-moz-selection { 
+    background-color: var(--color-primary);
+    color: #ffffff;
+  }
+
+
+body {
+    font-family: "Catamaran", serif;
+}
+
+nav a.active {
+    opacity: 100%;
+}
+
+nav a.active span{
+    width: 100%;
+}
+
+.mobile-nav a.active {
+    background-color: var(--color-primary);
+}
+
+.popup li {
+    line-height: 2;
+}
+
+p, li {
+    color: var(--color-darkGray);
+}
