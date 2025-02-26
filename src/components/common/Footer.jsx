@@ -106,18 +106,18 @@ const Footer = () => {
             </button>
 
             <div className="flex gap-3 mt-3">
-              <Link className="text-xl text-white hover:bg-primary hover:text-black duration-300 size-10 bg-darkGray grid place-items-center rounded-full">
+              <a href="https://www.facebook.com/progressionstudios/" target="_blank" className="text-xl text-white hover:bg-primary hover:text-black duration-300 size-10 bg-darkGray grid place-items-center rounded-full">
                 <FaFacebook />
-              </Link>
-              <Link className="text-xl text-white hover:bg-primary hover:text-black duration-300 size-10 bg-darkGray grid place-items-center rounded-full">
+              </a>
+              <a href="https://x.com/progression_s" target="_blank" className="text-xl text-white hover:bg-primary hover:text-black duration-300 size-10 bg-darkGray grid place-items-center rounded-full">
                 <FaSquareXTwitter />
-              </Link>
-              <Link className="text-xl text-white hover:bg-primary hover:text-black duration-300 size-10 bg-darkGray grid place-items-center rounded-full">
+              </a>
+              <a href="https://www.youtube.com/" target="_blank" className="text-xl text-white hover:bg-primary hover:text-black duration-300 size-10 bg-darkGray grid place-items-center rounded-full">
                 <FaYoutube />
-              </Link>
-              <Link className="text-xl text-white hover:bg-primary hover:text-black duration-300 size-10 bg-darkGray grid place-items-center rounded-full">
+              </a>
+              <a href="https://www.instagram.com/envato/" target="_blank" className="text-xl text-white hover:bg-primary hover:text-black duration-300 size-10 bg-darkGray grid place-items-center rounded-full">
                 <FaInstagram />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
