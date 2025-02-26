@@ -48,7 +48,7 @@ const SolarROICalculator = () => {
   }));
 
   return (
-    <div className="pt-20 flex flex-col h-screen bg-primary">
+    <div className="pt-20 flex flex-col md:h-screen bg-primary">
       <PageTitle title="SOLAR ROI CALCULATOR | Nu Power Group" />
 
           <h2 className="text-center text-base md:text-xl font-bold py-1">
