@@ -15,7 +15,7 @@ const ChatBot = () => {
         className={`overflow-clip duration-300 ${showChatBox ? "w-full sm:w-[400px] h-[500px] opacity-100" : " opacity-0 w-0 h-0"}`}
       >
         <iframe
-          src="https://app.wonderchat.io/chatbot/cm7lnwv9a09educqvsy73i4qk"
+          src="https://app.wonderchat.io/chatbot/cm7m6wjb301j1dvezo32avvym"
           allow="clipboard-read; clipboard-write"
           className={`w-full h-full `}
           id="wonderchat-iframe"
