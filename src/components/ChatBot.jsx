@@ -7,7 +7,7 @@ const ChatBot = () => {
   const [showChatBox, setShowChatBox] = useState(false);
 
   return (
-    <div className="fixed bottom-24 right-6 w-full pl-12 sm:pl-0 sm:w-fit flex flex-col bg-v iolet-500 sm:flex-row items-end gap-3 sm:gap-0">
+    <div className={`fixed bottom-24 right-0 sm:right-6 ${showChatBox ? "w-full sm:w-fit" : ""} sm:pl-0  flex flex-col sm:flex-row items-end gap-3 sm:gap-0`}>
 
       <div
         // initial={{ width: 0, height: 0, opacity : 0 }}
@@ -23,7 +23,7 @@ const ChatBot = () => {
       </div>
 
       <button
-        className="size-12 cursor-pointer"
+        className="size-10 md:size-12 cursor-pointer mr-6 sm:mr-0"
         onClick={() => setShowChatBox((prev) => !prev)}
       >
       
