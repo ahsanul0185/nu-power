@@ -16,64 +16,35 @@ const ContactForm = () => {
   // YOUR W3FORMS ACCESS KEY HERE
   const accessKey = "ad3e4ae4-e082-432a-8dac-73e533bf8846";
 
-  // Handle form submission
-  //   const onSubmit = async (event) => {
-  //     event.preventDefault();
-  //     setIsSending("Sending....");
-  //     const formData = new FormData(event.target);
-
-  //     formData.append("access_key", accessKey);
-
-  //     const response = await fetch("https://api.web3forms.com/submit", {
-  //       method: "POST",
-  //       body: formData,
-  //     });
-
-  //     const data = await response.json();
-
-  //     if (data.success) {
-  //       setIsSending("");
-  //       setSuccessMessage("Thank you for reaching out! We have received your message and will get back to you soon.");
-  //       setTimeout(() => {
-  //         setSuccessMessage("")
-  //       }, [4000])
-  //       event.target.reset();
-  //     } else {
-  //       console.log("Error", data);
-  //     }
-  // };
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    setIsSending(true)
 
-    const formEndpoint = "https://api.web3forms.com/submit";
+    const form = new FormData();
+    form.append("access_key", accessKey); // Replace with your Web3Forms Access Key
+    form.append("name", formData.name);
+    form.append("email", formData.email);
+    form.append("subject", formData.subject);
+    form.append("message", formData.message);
 
-    const payload = {
-      access_key: accessKey,
-      ...formData, 
-    };
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: form,
+    });
 
-    try {
-      const response = await fetch(formEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
-      const result = await response.json();
-      if (result.success) {
-        setIsSending("");
-        setSuccessMessage(
-          "Thank you for reaching out! We have received your message and will get back to you soon."
-        );
-        setTimeout(() => {
-          setSuccessMessage("");
-        }, [4000]);
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      }
-    } catch (error) {
-      console.log(error);
+    const result = await res.json();
+    if (result.success) {
+      setSuccessMessage("Thank you for reaching out! We have received your message and will get back to you soon.");
+      setIsSending(false)
+      setTimeout(() => {
+        setSuccessMessage("")
+      }, [4000])
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } else {
+      setSuccessMessage("Failed to send message. Try again!");
     }
+
   };
 
   const handleChange = (e) => {

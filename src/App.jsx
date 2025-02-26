@@ -36,7 +36,7 @@ const App = () => {
       </Routes>
       {!isNotFoundPage ? <Footer /> : ""}
       <ScrollTopButton />
-      {/* <ChatBot /> */}
+      <ChatBot />
     </div>
   );
 };

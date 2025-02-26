@@ -12,7 +12,7 @@ const Footer = () => {
       <CTA />
       <div className="section-padding">
         {/* Footer Links */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-5">
           <div className="lg:mx-auto">
             <Link to="/">
               <img className="w-32" src={logo_white} alt="" />
@@ -57,43 +57,6 @@ const Footer = () => {
                 to="/solar-energy-faqs"
               >
                 FAQs
-              </Link>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div className="lg:mx-auto">
-            <h3 className="text-white font-bold text-xl mb-4">Services</h3>
-            <ul className="flex flex-col gap-2 font-bold text-gray">
-              <Link
-                className="hover:text-primary transition-colors duration-300"
-                to="/our-services/solar-technology"
-              >
-                Solar Technology
-              </Link>
-              <Link
-                className="hover:text-primary transition-colors duration-300"
-                to="/our-services/solar-installation"
-              >
-                Solar Installation
-              </Link>
-              <Link
-                className="hover:text-primary transition-colors duration-300"
-                to="/our-services/battery-materials"
-              >
-                Battery Materials
-              </Link>
-              <Link
-                className="hover:text-primary transition-colors duration-300"
-                to="/our-services/solar-equipment"
-              >
-                Solar Equipment
-              </Link>
-              <Link
-                className="hover:text-primary transition-colors duration-300"
-                to="/our-services/charge-controllers"
-              >
-                Charge Controllers
               </Link>
             </ul>
           </div>
