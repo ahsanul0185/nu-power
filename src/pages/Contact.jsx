@@ -6,10 +6,12 @@ import ContactForm from "../components/contact/ContactForm";
 import ContactFAQs from "../components/contact/ContactFAQs";
 import { FaPhoneVolume, FaRegEnvelope } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import PageTitle from "../components/common/PageTitle";
 
 const Contact = () => {
   return (
     <div className="mt-[3.8rem] pb-10 md:pb-0">
+      <PageTitle title="Contact Nu Power Group | Solar Experts in KZN & Western Cape" />
       {/* Map */}
       <div>
         <iframe

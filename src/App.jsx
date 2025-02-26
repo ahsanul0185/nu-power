@@ -11,6 +11,7 @@ import Header from "./components/common/Header"
 import Footer from "./components/common/Footer"
 import ScrollToTop from "./helpers/ScrollToTop";
 import ScrollTopButton from "./components/common/ScrollTopButton";
+import ChatBot from "./components/ChatBot";
 
 const validRoutes = ["/", "/about", "/our-services", "/contact", "/solar-energy-faqs", "/solar-roi-calculator"];
 
@@ -35,6 +36,7 @@ const App = () => {
       </Routes>
       {!isNotFoundPage ? <Footer /> : ""}
       <ScrollTopButton />
+      {/* <ChatBot /> */}
     </div>
   );
 };

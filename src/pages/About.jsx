@@ -11,33 +11,47 @@ import img_solar from "../assets/img_hero.jpg";
 import img_solar_2 from "../assets/th.jpg";
 import img_street from "../assets/street.jpg";
 import { motion } from "motion/react";
+import bg from "../assets/rooftop.avif"
+import PageTitle from "../components/common/PageTitle";
 
 const About = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   return (
-    <div className="mt-24 section-padding about pb-10">
-      <div className="flex flex-col md:flex-row gap-8">
+    <div>
+      <PageTitle title="About Nu Power Group" />
+
+<motion.div initial={{opacity : 0}} animate={{opacity : 1}} transition={{duration : 0.7}} style={{ backgroundImage: `url(${bg})` }} className='relative h-screen bg-cover bg-center flex items-center justify-center flex-col gap-5 z-0 px-6'>
+      
+      {/* overlay */}
+      <div className='absolute inset-0 bg-black/30 -z-10' />
+
+      <motion.h3 initial={{opacity : 0}} animate={{opacity : 1}} transition={{duration : 0.7, delay : 0.5}} className='text-white text-base sm:text-2xl font-bold'> Turnkey Solar Installation Solutions for Businesses</motion.h3>
+      <motion.h2 initial={{opacity : 0}} animate={{opacity : 1}} transition={{duration : 0.7, delay : 0.5}} className='uppercase text-white font-bold text-xl sm:text-2xl text-center'> KZN's Most Trusted Solar Company</motion.h2>
+    </motion.div>
+
+    <div className="section-padding about pb-10">
+      <div className="flex flex-col md:flex-row gap-8 -translate-y-[30%]">
         <Card
           setShowPopup={setShowPopup}
           id="card-1"
           title="Commercial Solutions"
           img={icon_1}
-          delay={0}
+          delay={1.2}
         />
         <Card
           setShowPopup={setShowPopup}
           id="card-2"
           title="Home Solar Solutions"
           img={icon_2}
-          delay={0.2}
+          delay={1.4}
         />
         <Card
           setShowPopup={setShowPopup}
           id="card-3"
           title="Rural Electrification"
           img={icon_3}
-          delay={0.4}
+          delay={1.6}
         />
       </div>
 
@@ -55,7 +69,7 @@ const About = () => {
         </Popup>
       )}
 
-      <div className="flex flex-col md:flex-row gap-8 mt-20 mb-5">
+      <div className="flex flex-col md:flex-row gap-8 mb-5">
       <motion.div initial={{ x : -100,opacity : 0}} whileInView={{ x : 0, opacity : 1}} transition={{duration : 0.8}} viewport={{once : true}} className="order-2 md:order-1">
         <h2 className="text-2xl text-dark font-bold">
           About Nu Power Group - Trusted Solar Experts in Western Cape & KZN
@@ -182,6 +196,7 @@ const About = () => {
             </ul>
         </motion.div>
       </div>
+    </div>
     </div>
   );
 };

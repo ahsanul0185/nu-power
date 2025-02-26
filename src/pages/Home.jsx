@@ -6,12 +6,13 @@ import OurVision from "../components/home/OurVision";
 import img_1 from "../assets/person-solar-roof.jpg";
 import img_2 from "../assets/solar-roof.jpg";
 import { motion } from "motion/react";
+import PageTitle from "../components/common/PageTitle";
 
 const Home = () => {
   return (
     <div>
+      <PageTitle title="Nu Power Group | Solar Power Experts in KZN & Western Cape" />
       <Hero />
-
       <div className="section-padding py-12">
         <div className="mb-16">
           <h2 className="text-xl sm:text-2xl font-bold mb-3.5">
@@ -41,8 +42,14 @@ const Home = () => {
         <br />
         <Title title="Get to know us" />
 
-        <motion.div initial={{ opacity : 0}} whileInView={{ opacity : 1}} transition={{duration : 0.8}} viewport={{once : true}} className="flex gap-12 mt-6">
-          <div >
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="flex gap-12 mt-6"
+        >
+          <div>
             <h2 className="text-xl md:text-2xl mb-3 font-bold">
               <a href="https://www.sunsynk.org/" target="_blank">
                 Affordable Solar Energy Solutions in KwaZulu-Natal & Western

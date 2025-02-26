@@ -3,6 +3,7 @@ import { Card, CardContent } from "../components/solar-roi-calculator/Card";
 import { Slider } from "../components/solar-roi-calculator/Slider";
 import { Button } from "../components/solar-roi-calculator/Button";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import PageTitle from "../components/common/PageTitle";
 
 const SolarROICalculator = () => {
   const [bill, setBill] = useState(0);
@@ -37,6 +38,7 @@ const SolarROICalculator = () => {
 
   return (
     <div className="p-4 bg-orange-500 min-h-screen grid grid-cols-3 gap-4">
+      <PageTitle title="SOLAR ROI CALCULATOR | Nu Power Group" />
       <div className="col-span-3 flex justify-between items-center mb-4">
         <img src="/mnt/data/logo wht.jpg" alt="Company Logo" className="h-16" />
         <div className="text-center text-xl font-bold">SOLAR ROI CALCULATOR</div>

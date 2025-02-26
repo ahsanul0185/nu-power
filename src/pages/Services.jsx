@@ -5,19 +5,25 @@ import img_commercial_solutions from "../assets/electrician-2.jpg";
 import img_battery from "../assets/img_battery.jpg";
 import img_rural from "../assets/street.jpg";
 import img_solar from "../assets/solar-roof.jpg";
+import bg from "../assets/sky-solar.avif"
 import { motion } from "motion/react";
+import PageTitle from "../components/common/PageTitle";
 
 const Services = () => {
   return (
-    <div className="mt-32 section-padding pb-10 md:pb-0">
-      <motion.div initial={{y : -30, opacity : 0}} animate={{y: 0, opacity: 1}} transition={{duration : 0.8}} className="flex flex-col items-center text-dark my-20">
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase text-center">
-          Welcome to the world of solar energy
-        </h1>
-        <h2 className="flex items-center gap-1 sm:text-xl md:text-2xl font-semibold mt-3 flex-wrap justify-center">
-          Sustainable <LuDot /> Efficient <LuDot /> Powerful <LuDot /> Reliable
-        </h2>
+    <div>
+      <PageTitle title="Solar Energy Services | Nu Power Group — KZN & Western Cape" />
+      <motion.div initial={{opacity : 0}} animate={{opacity : 1}} transition={{duration : 0.7}} style={{ backgroundImage: `url(${bg})` }} className='relative h-screen bg-cover bg-center flex items-center justify-center flex-col gap-4 z-0 px-6'>
+            
+            {/* overlay */}
+            <div className='absolute inset-0 bg-black/40 -z-10' />
+      
+            <motion.h3 initial={{opacity : 0}} animate={{opacity : 1}} transition={{duration : 0.7, delay : 0.5}} className='uppercase text-white text-sm sm:text-base font-semibold tracking-wider'> Welcome to the world of solar energy</motion.h3>
+            <motion.h2 initial={{opacity : 0}} animate={{opacity : 1}} transition={{duration : 0.7, delay : 0.5}} className='flex items-center gap-1 sm:text-xl md:text-3xl font-bold flex-wrap justify-center text-white'> Sustainable <LuDot /> Efficient <LuDot /> Powerful <LuDot /> Reliable</motion.h2>
       </motion.div>
+      
+
+    <div className="mt-14 section-padding pb-10 md:pb-0">
 
       <h2 className="text-xl md:text-2xl font-bold text-dark mb-3">
         Why Choose Solar Energy Services | Nu Power Group?
@@ -261,6 +267,7 @@ const Services = () => {
       <br />
       <h2 className="text-xl md:text-2xl font-bold text-dark">📞 Contact us today to discuss how we can help you transition to clean, cost-effective energy!</h2>
       </motion.div>
+    </div>
     </div>
   );
 };

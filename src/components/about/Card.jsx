@@ -7,7 +7,7 @@ import { motion } from 'motion/react';
 
 const Card = ({setShowPopup, id, img, title, delay}) => {
   return (
-    <motion.div initial={{y : 50, opacity : 0}} animate={{y : 0, opacity : 1}} transition={{duration : 0.8, ease : "easeOut", delay}} onClick={() => setShowPopup(id)} className='flex w-full flex-col items-center gap-4 bg-slate-100 p-8 cursor-pointer group'>
+    <motion.div initial={{y : 50, opacity : 0}} animate={{y : 0, opacity : 1}} transition={{duration : 0.8, ease : "easeOut", delay}} onClick={() => setShowPopup(id)} className='flex w-full shadow-lg flex-col items-center gap-4 bg-slate-100 p-8 cursor-pointer group'>
         <img className='size-16' src={img} alt="" />
           <h2 className='text-xl md:text-2xl font-bold text-center'>{ title }</h2>
         <span className='size-12 bg-darkGray group-hover:bg-primary duration-300 grid place-items-center rounded-full text-white'>

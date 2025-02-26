@@ -7,6 +7,7 @@ import img_domestic from "../assets/img_hero.jpg"
 import img_commercial from "../assets/rooftop.avif"
 import img_battery from "../assets/img_battery_2.jpg"
 import img_elevator from "../assets/controller.png"
+import PageTitle from "../components/common/PageTitle";
 
 const FAQs = () => {
   const [activeIndex, setActiveIndex] = useState({
@@ -30,6 +31,7 @@ const FAQs = () => {
 
   return (
     <div className="mt-28 section-padding about pb-10">
+      <PageTitle title="FAQ | Solar Energy FAQs I Nu Power Group" />
       <h1 className="font-bold text-dark text-xl sm:text-2xl md:text-3xl">
         FAQs - Commercial & Domestic Solar and Battery Backup Solutions
       </h1>

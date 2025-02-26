@@ -13,11 +13,12 @@ done - scroll navigator
 done - some adjustment in mobile menu
 done - scrollTop on page load or in navigation
 done - animation
+done - set favicon
 - remove web3forms access key
 - 404 problem in routing
 - learn seo, hosting react website and management
-- set favicon
 - enhance performance
+- react helmet
 
 done - get a quote button
 done- about us faqs image
