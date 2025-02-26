@@ -7,6 +7,7 @@ import img_1 from "../assets/person-solar-roof.jpg";
 import img_2 from "../assets/solar-roof.jpg";
 import { motion } from "motion/react";
 import PageTitle from "../components/common/PageTitle";
+import ChatBot from "../components/ChatBot";
 
 const Home = () => {
   return (
@@ -128,6 +129,7 @@ const Home = () => {
           </div>
         </motion.div>
       </div>
+      <ChatBot />
     </div>
   );
 };
