@@ -19,8 +19,9 @@ done - react helmet
 - 404 problem in routing
 - learn seo, hosting react website and management
 - enhance performance
+- logo
 
 done - get a quote button
 done- about us faqs image
 done - remove discover more button from home page
-- live chat feature
+done - live chat feature
