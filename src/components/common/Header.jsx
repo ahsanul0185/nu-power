@@ -146,7 +146,7 @@ const Header = () => {
         </ul>
       </nav>
 
-      <button onClick={() => setIsMenuOpen(prev => !prev)} className={`${isScrolled || location.pathname !== "/" ? "text-black" : "text-white"} text-3xl block md:hidden cursor-pointer`}>
+      <button onClick={() => setIsMenuOpen(prev => !prev)} className={`${isScrolled || !transparentHeader ? "text-black" : "text-white"} text-3xl block md:hidden cursor-pointer`}>
         <IoMdMenu />
       </button>
 
