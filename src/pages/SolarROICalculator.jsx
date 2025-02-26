@@ -48,14 +48,14 @@ const SolarROICalculator = () => {
   }));
 
   return (
-    <div className="pt-20 pb-10 bg-primary">
+    <div className="pt-20 h-screen bg-primary flex flex-col">
       <PageTitle title="SOLAR ROI CALCULATOR | Nu Power Group" />
 
-          <h2 className="text-center text-xl md:text-2xl font-bold py-5">
+      <h2 className="text-center text-base md:text-xl font-bold py-1">
             SOLAR ROI CALCULATOR
           </h2>
     
-      <div className="p-4 min-h-screen grid grid-cols-1 md:grid-cols-3 grid-rows-1 md:grid-rows-1 gap-4">
+      <div className="p-4 flex-1 grid grid-cols-1 md:grid-cols-3 grid-rows-1 md:grid-rows-1 gap-4 ">
 
         <div className="col-span-1 flex flex-col gap-4">
           <Card>
@@ -151,10 +151,10 @@ const SolarROICalculator = () => {
             </Card>
           </div>
 
-          <Card>
+          <Card className="h-full">
             <CardContent>
               <h3>Payback Period Chart</h3>
-              <ResponsiveContainer width="100%" height={300}>
+              <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={data}>
                   <XAxis dataKey="year" />
                   <YAxis />

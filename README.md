@@ -20,6 +20,8 @@ done - react helmet
 - learn seo, hosting react website and management
 - enhance performance
 - logo
+- keep api keys in the .env file
+
 
 done - get a quote button
 done- about us faqs image
