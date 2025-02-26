@@ -31,41 +31,41 @@ const ContactForm = () => {
     };
 
   return (
-    <form onSubmit={onSubmit} className="w-full flex flex-col gap-6">
+    <form onSubmit={onSubmit} className="w-full flex flex-col gap-3 md:gap-6">
       <input
         type="text"
         placeholder="Your Name"
-              className="w-full px-4 py-3 border border-gray focus:border-primary outline-0"
-              name="name"
-              required
+        className="w-full px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base border border-gray focus:border-primary outline-0"
+        name="name"
+        required
       />
 
       <input
         type="email"
         placeholder="Your Email"
-              className="w-full px-4 py-3 border border-gray focus:border-primary outline-0"
-              name="email"
-              required
+        className="w-full px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base border border-gray focus:border-primary outline-0"
+        name="email"
+        required
       />
 
       <input
         type="text"
         placeholder="Subject"
-              className="w-full px-4 py-3 border border-gray focus:border-primary outline-0"
-              name="subject"
-            required
+        className="w-full px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base border border-gray focus:border-primary outline-0"
+        name="subject"
+        required
       />
 
       <textarea
-        className="w-full px-4 py-3 border border-gray focus:border-primary outline-0 h-56"
-              placeholder="Your Message"
-              name="message"
-            onChange={(e) => setMessage(e.target.value)}
-            required
+        className="w-full px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base border border-gray focus:border-primary outline-0 h-36 md:h-56"
+        placeholder="Your Message"
+        name="message"
+        onChange={(e) => setMessage(e.target.value)}
+        required
           ></textarea>
           
           <div className="text-right">
-          <button className="px-6 py-3 bg-primary text-white font-bold hover:bg-dark duration-300 cursor-pointer w-fit">
+          <button className="px-4 md:px-6 py-2.5 md:py-3 bg-primary text-sm md:text-base text-white font-bold hover:bg-dark duration-300 cursor-pointer w-fit">
           {!isSending ? "Send a Message" : "Sending"}
           </button>
           </div>

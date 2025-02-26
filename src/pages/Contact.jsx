@@ -3,6 +3,7 @@ import img_contact from "../assets/img_contact.avif";
 import Title from "../components/home/Title";
 import { Link } from "react-router-dom";
 import ContactForm from "../components/contact/ContactForm";
+import ContactFAQs from "../components/contact/ContactFAQs";
 import { FaPhoneVolume, FaRegEnvelope } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 
@@ -22,8 +23,8 @@ const Contact = () => {
       </div>
 
       <div className="section-padding mt-16">
-        <div className="flex gap-12">
-          <div className="flex flex-col gap-4 w-1/2">
+        <div className="flex flex-col md:flex-row gap-12">
+          <div className="flex flex-col gap-4 md:w-1/2">
             <img className="mb-3" src={img_contact} alt="" />
             <Title title="Get in touch" />
             <h2 className="text-xl md:text-2xl font-bold">
@@ -56,26 +57,30 @@ const Contact = () => {
             <p>📅 <b>Schedule your free quote today!</b> Contact us now to get started.</p>
           </div>
 
-          <div className="w-1/2">
+          <div className="md:w-1/2">
             <ContactForm />
             <div className="mt-10">
               <h2 className="text-xl md:text-2xl font-bold text-dark mb-2">📞 How to Contact Nu Power Group</h2>
               <p>Nu Power Group offer multiple ways to reach us for your convenience:</p>
 
               <ul className="mt-5 flex flex-col gap-5">
-                <li className="flex items-center gap-6">
-                  <span className="bg-darkGray text-white size-12 rounded-full grid place-items-center text-2xl"><FaPhoneVolume /></span> <span className="font-bold text-dark text-xl">+27 795255191</span>
+                <li className="flex items-center gap-4 md:gap-6">
+                  <span className="bg-darkGray text-white size-10 md:size-12 rounded-full grid place-items-center text-2xl"><FaPhoneVolume /></span> <span className="font-bold text-dark md:text-xl">+27 795255191</span>
                 </li>
-                <li className="flex items-center gap-6">
-                  <span className="bg-darkGray text-white size-12 rounded-full grid place-items-center text-2xl"><FaRegEnvelope /></span> <span className="font-bold text-dark text-xl">ben@nupowergroup.co.za</span>
+                <li className="flex items-center gap-4 md:gap-6">
+                  <span className="bg-darkGray text-white size-10 md:size-12 rounded-full grid place-items-center text-2xl"><FaRegEnvelope /></span> <span className="font-bold text-dark md:text-xl">ben@nupowergroup.co.za</span>
                 </li>
-                <li className="flex items-center gap-6">
-                  <span className="bg-darkGray text-white size-12 rounded-full grid place-items-center text-2xl"><FaLocationDot /></span> <span className="font-bold text-dark text-xl">Ballito, KZN</span>
+                <li className="flex items-center gap-4 md:gap-6">
+                  <span className="bg-darkGray text-white size-10 md:size-12 rounded-full grid place-items-center text-2xl"><FaLocationDot /></span> <span className="font-bold text-dark md:text-xl">Ballito, KZN</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
+
+
+        <ContactFAQs />
+
       </div>
     </div>
   );

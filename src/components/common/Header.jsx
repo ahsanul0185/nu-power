@@ -158,10 +158,10 @@ const Header = () => {
       </nav>
 
 
-      <button className="absolute top-0 right-8 hidden lg:flex items-center gap-3 px-6 py-4 bg-primary cursor-pointer text-white text-sm hover:bg-darkGray duration-300">
+      <Link to="/contact" className="absolute top-0 right-8 hidden lg:flex items-center gap-3 px-6 py-4 bg-primary cursor-pointer text-white text-sm hover:bg-darkGray duration-300">
         {" "}
         <FaEnvelope className="size-4" /> Get a Quote
-      </button>
+      </Link>
     </header>
   );
 };

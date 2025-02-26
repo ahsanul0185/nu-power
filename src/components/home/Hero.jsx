@@ -1,5 +1,6 @@
 import React from 'react'
 import bg from "../../assets/img_hero.jpg"
+import { motion } from 'motion/react'
 
 const Hero = () => {
   return (
@@ -8,9 +9,8 @@ const Hero = () => {
       {/* overlay */}
       <div className='absolute inset-0 bg-black/30 -z-10' />
 
-      <p className='uppercase text-white text-sm sm:text-base font-bold'> Technology People Love</p>
-      <h2 className='uppercase text-white font-bold text-xl sm:text-2xl text-center'> Powering KZN with Smart, Reliable, and Affordable Solar Energy.</h2>
-      <button className='px-5 py-4 bg-[#646263] text-xs sm:text-sm text-white font-semibold cursor-pointer hover:bg-primary duration-300'>Discover More</button>
+      <motion.h3 initial={{opacity : 0}} animate={{opacity : 1}} transition={{duration : 0.7}} className='uppercase text-white text-sm sm:text-base font-bold'> Technology People Love</motion.h3>
+      <motion.h2 initial={{opacity : 0}} animate={{opacity : 1}} transition={{duration : 0.7}} className='uppercase text-white font-bold text-xl sm:text-2xl text-center'> Powering KZN with Smart, Reliable, and Affordable Solar Energy.</motion.h2>
     </div>
   )
 }

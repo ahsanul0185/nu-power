@@ -255,10 +255,12 @@ const Services = () => {
         </div>
       </div>
 
+      <motion.div initial={{ opacity : 0}} whileInView={{ opacity : 1}} transition={{duration : 0.8}} viewport={{once : true}}>
       <h2 className="text-xl md:text-2xl font-bold text-dark">💡 Let's Power Your Future Together!</h2>
       <p>At <b>Nu Power Group</b>, we deliver <b>custom energy solutions</b> designed for efficiency, reliability, and sustainability.</p>
       <br />
       <h2 className="text-xl md:text-2xl font-bold text-dark">📞 Contact us today to discuss how we can help you transition to clean, cost-effective energy!</h2>
+      </motion.div>
     </div>
   );
 };

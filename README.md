@@ -8,7 +8,18 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-- Not found page
-- scroll navigator
-- animation
-- scrollTop on page load or in navigation
+done - Not found page 
+done - scroll navigator
+done - some adjustment in mobile menu
+done - scrollTop on page load or in navigation
+done - animation
+- remove web3forms access key
+- 404 problem in routing
+- learn seo, hosting react website and management
+- set favicon
+- enhance performance
+
+done - get a quote button
+done- about us faqs image
+done - remove discover more button from home page
+- live chat feature

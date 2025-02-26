@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { faqs } from "../faqs";
 import { TfiAngleDown } from "react-icons/tfi";
-import {  motion } from "motion/react";
+import { motion } from "motion/react";
+import img_general from "../assets/home.jpg"
+import img_domestic from "../assets/img_hero.jpg"
+import img_commercial from "../assets/rooftop.avif"
+import img_battery from "../assets/img_battery_2.jpg"
+import img_elevator from "../assets/controller.png"
 
 const FAQs = () => {
   const [activeIndex, setActiveIndex] = useState({
@@ -40,16 +45,17 @@ const FAQs = () => {
         insights to help you make informed decisions
       </p>
 
-      <div className="mt-20 flex flex-col gap-10">
+      <div className="mt-10 md:mt-20 flex flex-col gap-10">
         {/* General */}
         <div>
           <h2 className="text-xl md:text-2xl font-bold text-dark">
             ☀️ General Solar FAQs
           </h2>
+          <img className=" mt-3 w-full aspect-4/2 object-cover object-center" src={ img_general} alt="General Solar FAQs" />
           {faqs.general.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray my-5  rounded-xl overflow-hidden"
+              className="border border-gray my-3 md:my-5  rounded-xl overflow-hidden"
             >
               <button
                 onClick={() => toggleActiveIndex("general", index)}
@@ -81,10 +87,11 @@ const FAQs = () => {
           <h2 className="text-xl md:text-2xl font-bold text-dark">
             🏠 Domestic Solar FAQs
           </h2>
+          <img className=" mt-3 w-full aspect-4/2 object-cover object-center" src={ img_domestic} alt="General Solar FAQs" />
           {faqs.domestic.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray my-5  rounded-xl overflow-hidden"
+              className="border border-gray my-3 md:my-5  rounded-xl overflow-hidden"
             >
               <button
                 onClick={() => toggleActiveIndex("domestic", index)}
@@ -118,10 +125,11 @@ const FAQs = () => {
           <h2 className="text-xl md:text-2xl font-bold text-dark">
             🏢 Commercial Solar FAQs
           </h2>
+          <img className=" mt-3 w-full aspect-4/2 object-cover object-center" src={ img_commercial} alt="General Solar FAQs" />
           {faqs.commercial.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray my-5  rounded-xl overflow-hidden"
+              className="border border-gray my-3 md:my-5  rounded-xl overflow-hidden"
             >
               <button
                 onClick={() => toggleActiveIndex("commercial", index)}
@@ -162,10 +170,11 @@ const FAQs = () => {
           <h2 className="text-xl md:text-2xl font-bold text-dark">
             🔋 Battery Backup FAQs
           </h2>
+          <img className=" mt-3 w-full aspect-4/2 object-cover object-center" src={ img_battery} alt="General Solar FAQs" />
           {faqs.battery.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray my-5  rounded-xl overflow-hidden"
+              className="border border-gray my-3 md:my-5  rounded-xl overflow-hidden"
             >
               <button
                 onClick={() => toggleActiveIndex("battery", index)}
@@ -184,13 +193,13 @@ const FAQs = () => {
                 animate={{ height: activeIndex.battery === index ? "auto" : 0 }}
               >
                 <div className="px-5 md:pl-[4.5rem] pb-4 text-sm md:text-[1.1rem]">
-                  <p>
+                  <div>
                     {faq.answer !== "battery-type" ? (
                       faq.answer
                     ) : (
                       <BatteryTypeList />
                     )}
-                  </p>
+                  </div>
                   <ul className="list-disc pl-5 mt-1 font-semibold">
                     {faq.list?.map((item, idx) => (
                       <li key={idx}>{item}</li>
@@ -207,10 +216,11 @@ const FAQs = () => {
           <h2 className="text-xl md:text-2xl font-bold text-dark">
             🛗 Elevator Backup & Solar Power FAQs
           </h2>
+          <img className=" mt-3 w-full aspect-4/2 object-cover object-center" src={ img_elevator} alt="General Solar FAQs" />
           {faqs.elevator.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray my-5  rounded-xl overflow-hidden"
+              className="border border-gray my-3 md:my-5  rounded-xl overflow-hidden"
             >
               <button
                 onClick={() => toggleActiveIndex("elevator", index)}
@@ -252,7 +262,7 @@ const FAQs = () => {
           {faqs.warranty.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray my-5  rounded-xl overflow-hidden"
+              className="border border-gray my-3 md:my-5  rounded-xl overflow-hidden"
             >
               <button
                 onClick={() => toggleActiveIndex("warranty", index)}

@@ -8,6 +8,9 @@ import CommercialSolutions from "../components/about/CommercialSolutions";
 import SolarSolutions from "../components/about/SolarSolutions";
 import RuralElectrification from "../components/about/RuralElectrification";
 import img_solar from "../assets/img_hero.jpg";
+import img_solar_2 from "../assets/th.jpg";
+import img_street from "../assets/street.jpg";
+import { motion } from "motion/react";
 
 const About = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -52,8 +55,9 @@ const About = () => {
         </Popup>
       )}
 
-      <div>
-        <h2 className="text-2xl text-dark font-bold mt-20 mb-5">
+      <div className="flex flex-col md:flex-row gap-8 mt-20 mb-5">
+      <motion.div initial={{ x : -100,opacity : 0}} whileInView={{ x : 0, opacity : 1}} transition={{duration : 0.8}} viewport={{once : true}} className="order-2 md:order-1">
+        <h2 className="text-2xl text-dark font-bold">
           About Nu Power Group - Trusted Solar Experts in Western Cape & KZN
         </h2>
         <p>
@@ -114,12 +118,18 @@ const About = () => {
             Powering the Future. Sustaining Your Success.
           </span>
         </p>
+        </motion.div>
+        
+        <motion.div initial={{ x : 100,opacity : 0}} whileInView={{ x : 0, opacity : 1}} transition={{duration : 0.8}} viewport={{once : true}} className="flex flex-col md:w-1/2 shrink-0 gap-8 order-1 md:order-2">
+          <img className="aspect-video" src={ img_solar_2} alt="Solar Power World" />
+          <img className="aspect-video" src={ img_street} alt="Solar Power World" />
+        </motion.div>
       </div>
 
      
         <div className="flex flex-col md:flex-row gap-8 mt-16">
-          <img className="md:w-1/2 aspect-video md:aspect-auto" src={img_solar} alt="Nu Power Group" />
-          <div>
+          <motion.img initial={{ x : -100,opacity : 0}} whileInView={{ x : 0, opacity : 1}} transition={{duration : 0.8}} viewport={{once : true}} className="md:w-1/2 aspect-video md:aspect-auto" src={img_solar} alt="Nu Power Group" />
+          <motion.div initial={{ x : 100,opacity : 0}} whileInView={{ x : 0, opacity : 1}} transition={{duration : 0.8}} viewport={{once : true}}>
             <h2 className="text-xl md:text-2xl text-dark font-bold mb-5">
               🌍 Comprehensive Solar Solutions
             </h2>
@@ -170,7 +180,7 @@ const About = () => {
                 savings
               </li>
             </ul>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

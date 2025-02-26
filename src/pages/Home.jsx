@@ -5,6 +5,7 @@ import OurMission from "../components/home/OurMission";
 import OurVision from "../components/home/OurVision";
 import img_1 from "../assets/person-solar-roof.jpg";
 import img_2 from "../assets/solar-roof.jpg";
+import { motion } from "motion/react";
 
 const Home = () => {
   return (
@@ -40,8 +41,8 @@ const Home = () => {
         <br />
         <Title title="Get to know us" />
 
-        <div className="flex gap-12 mt-6">
-          <div>
+        <motion.div initial={{ opacity : 0}} whileInView={{ opacity : 1}} transition={{duration : 0.8}} viewport={{once : true}} className="flex gap-12 mt-6">
+          <div >
             <h2 className="text-xl md:text-2xl mb-3 font-bold">
               <a href="https://www.sunsynk.org/" target="_blank">
                 Affordable Solar Energy Solutions in KwaZulu-Natal & Western
@@ -118,7 +119,7 @@ const Home = () => {
               alt="Off-Grid and Hybrid Solar Systems"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

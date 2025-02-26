@@ -1,11 +1,12 @@
 import React from 'react'
-import img_solar from "../../assets/solar.jpg";
+import img_solar from "../../assets/solar.jpg"
+import { motion } from 'motion/react'
 
 const OurMission = () => {
   return (
     <div className="mt-12 flex flex-col md:flex-row gap-12 items-start">
-          <img className="md:w-1/2 aspect-4/2 md:aspect-4/3" src={img_solar} alt="" />
-          <div className="flex-1">
+          <motion.img initial={{x : -100, opacity : 0}} whileInView={{x : 0, opacity : 1}} transition={{duration : 0.8}} viewport={{once : true}} className="md:w-1/2 aspect-4/2 md:aspect-4/3" src={img_solar} alt="" />
+          <motion.div initial={{x : 100, opacity : 0}} whileInView={{x : 0, opacity : 1}} transition={{duration : 0.8}} viewport={{once : true}} className="flex-1">
             <h2 className="text-xl md:text-2xl font-bold mb-2">🌍 Our Mission</h2>
             <p className="text-darkGray leading-7">
               At <b>Nu Power Group</b>, our mission is to{" "}
@@ -46,7 +47,7 @@ const OurMission = () => {
                 investment.
               </li>
             </ul>
-          </div>
+          </motion.div>
         </div>
   )
 }
